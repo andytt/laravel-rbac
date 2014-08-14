@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRolesResourcesTable extends Migration {
+class CreatePermissionsTable extends Migration {
 
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateRolesResourcesTable extends Migration {
     public function up()
     {
 
-        if (!Schema::hasTable('rbac_roles_resources')) {
+        if (!Schema::hasTable('rbac_permissions')) {
 
-            Schema::create('rbac_roles_resources', function ($t) {
+            Schema::create('rbac_permissions', function ($t) {
 
                 $t->engine = 'InnoDB';
 
@@ -30,8 +30,8 @@ class CreateRolesResourcesTable extends Migration {
                 $t->unique(['role_id', 'resource_id'], 'role_resource_id_unique');
 
             });
-
         }
+
     }
 
     /**
@@ -42,9 +42,9 @@ class CreateRolesResourcesTable extends Migration {
     public function down()
     {
 
-        if (Schema::hasTable('rbac_roles_resources')) {
+        if (Schema::hasTable('rbac_permissions')) {
 
-            Schema::drop('rbac_roles_resources');
+            Schema::drop('rbac_permissions');
 
         }
 
