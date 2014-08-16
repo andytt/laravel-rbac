@@ -8,11 +8,17 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
-        "illuminate/database": "4.2.*",
-        "andytt/uuid": "0.2.1"
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
+        "illuminate/database": "4.1.*",
+        "andytt/uuid": "dev-feature/L41"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/andytt/laravel-uuid/"
+        }
+    ],
     "autoload": {
         "classmap": [
             "src/migrations",

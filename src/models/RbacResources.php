@@ -1,14 +1,11 @@
 <?php namespace Andytt\LaravelRbac;
 
 use \Illuminate\Database\Eloquent\Model as Eloquent;
-use \Illuminate\Database\Eloquent\SoftDeletingTrait as SoftDeletingTrait;
 use \Illuminate\Support\Facades\Validator as Validator;
 use \Andytt\Uuid\Uuid as Uuid;
 
 class RbacResources extends Eloquent
 {
-
-    use SoftDeletingTrait;
 
     protected $table = 'rbac_resources';
 
