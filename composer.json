@@ -13,12 +13,6 @@
         "illuminate/database": "4.1.*",
         "andytt/uuid": "dev-feature/L41"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/andytt/laravel-uuid/"
-        }
-    ],
     "autoload": {
         "classmap": [
             "src/migrations",
